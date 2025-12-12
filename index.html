@@ -3,77 +3,172 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catálogo de casas - Amazonia</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Catálogo de Modelos de Casas</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="container hero">
-      <div>
-        <p class="tag">Construcción en seco • Viviendas modulares</p>
-        <h1>Catálogo de casas Amazonia</h1>
-        <p>Descubrí modelos optimizados, eficientes y listos para habitar en todo el país.</p>
+  <header class="hero">
+    <div class="shell">
+      <div class="brand">
+        <div class="logo" aria-label="Logo">LOGO</div>
+        <p class="subtitle">Viviendas modulares y eficientes</p>
       </div>
-      <div>
-        <div class="controls">
-          <div>
-            <label for="search">Búsqueda</label>
-            <input type="search" id="search" placeholder="Buscar por nombre o ubicación...">
-          </div>
-          <div>
-            <label for="status">Estado</label>
-            <select id="status">
-              <option value="">Todos</option>
-              <option value="Disponible">Disponible</option>
-              <option value="Reservada">Reservada</option>
-              <option value="Vendida">Vendida</option>
-            </select>
-          </div>
-          <div>
-            <label for="minArea">Mín m²</label>
-            <input type="number" id="minArea" placeholder="Ej: 120" min="0">
-          </div>
-          <div>
-            <label for="bedrooms">Dormitorios</label>
-            <select id="bedrooms">
-              <option value="">Todos</option>
-              <option value="2">Desde 2</option>
-              <option value="3">Desde 3</option>
-              <option value="4">Desde 4</option>
-            </select>
-          </div>
-          <div>
-            <label for="garage">Cochera</label>
-            <select id="garage">
-              <option value="">Todas</option>
-              <option value="true">Con cochera</option>
-              <option value="false">Sin cochera</option>
-            </select>
-          </div>
-          <div>
-            <label for="sort">Ordenar por</label>
-            <select id="sort">
-              <option value="name">Nombre</option>
-              <option value="area">m²</option>
-              <option value="bedrooms">Dormitorios</option>
-            </select>
-          </div>
-        </div>
-      </div>
+      <a class="whatsapp-btn" href="https://wa.me/549XXXXXXXXXX?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20cat%C3%A1logo." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        Contactar por WhatsApp
+      </a>
     </div>
   </header>
 
-  <main class="container">
-    <div id="grid" class="grid" aria-live="polite"></div>
-    <div id="empty" class="empty" hidden>Sin resultados. Ajustá filtros o búsqueda.</div>
+  <main>
+    <section class="models" id="modelos">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Modelos</p>
+            <h1>Elegí el modelo que mejor se adapte a vos</h1>
+            <p class="lead">Diseños modernos con construcción en seco, listos para habitar.</p>
+          </div>
+        </div>
+
+        <div class="models-grid">
+          <article class="card">
+            <div class="card-header">
+              <div>
+                <p class="pill">80 m²</p>
+                <h2>Modelo Andes</h2>
+              </div>
+              <ul class="facts">
+                <li>2 dormitorios</li>
+                <li>1 baño</li>
+                <li>Cocina integrada</li>
+                <li>Galería techada</li>
+              </ul>
+            </div>
+
+            <div class="carousel" data-carousel>
+              <div class="slides" data-slides>
+                <div class="slide active" data-slide>
+                  <img src="assets/modelo-andes-1.jpg" alt="Modelo Andes vista principal">
+                </div>
+                <div class="slide" data-slide>
+                  <img src="assets/modelo-andes-2.jpg" alt="Modelo Andes living">
+                </div>
+                <div class="slide" data-slide>
+                  <img src="assets/modelo-andes-3.jpg" alt="Modelo Andes dormitorio">
+                </div>
+              </div>
+              <button class="nav prev" type="button" data-prev aria-label="Imagen anterior de Modelo Andes">&#10094;</button>
+              <button class="nav next" type="button" data-next aria-label="Imagen siguiente de Modelo Andes">&#10095;</button>
+              <div class="dots" data-dots aria-label="Indicadores de imágenes"></div>
+            </div>
+
+            <a class="cta" href="https://wa.me/549XXXXXXXXXX?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20Modelo%20Andes." target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div>
+                <p class="pill">110 m²</p>
+                <h2>Modelo Pampa</h2>
+              </div>
+              <ul class="facts">
+                <li>3 dormitorios</li>
+                <li>2 baños</li>
+                <li>Estar comedor amplio</li>
+                <li>Terraza exterior</li>
+              </ul>
+            </div>
+
+            <div class="carousel" data-carousel>
+              <div class="slides" data-slides>
+                <div class="slide active" data-slide>
+                  <img src="assets/modelo-pampa-1.jpg" alt="Modelo Pampa fachada">
+                </div>
+                <div class="slide" data-slide>
+                  <img src="assets/modelo-pampa-2.jpg" alt="Modelo Pampa interior">
+                </div>
+                <div class="slide" data-slide>
+                  <img src="assets/modelo-pampa-3.jpg" alt="Modelo Pampa jardín">
+                </div>
+                <div class="slide" data-slide>
+                  <img src="assets/modelo-pampa-4.jpg" alt="Modelo Pampa cocina">
+                </div>
+              </div>
+              <button class="nav prev" type="button" data-prev aria-label="Imagen anterior de Modelo Pampa">&#10094;</button>
+              <button class="nav next" type="button" data-next aria-label="Imagen siguiente de Modelo Pampa">&#10095;</button>
+              <div class="dots" data-dots aria-label="Indicadores de imágenes"></div>
+            </div>
+
+            <a class="cta" href="https://wa.me/549XXXXXXXXXX?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20Modelo%20Pampa." target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div>
+                <p class="pill">65 m²</p>
+                <h2>Modelo Río</h2>
+              </div>
+              <ul class="facts">
+                <li>1 dormitorio</li>
+                <li>1 baño</li>
+                <li>Espacio flexible</li>
+                <li>Grandes ventanales</li>
+              </ul>
+            </div>
+
+            <div class="carousel" data-carousel>
+              <div class="slides" data-slides>
+                <div class="slide active" data-slide>
+                  <img src="assets/modelo-rio-1.jpg" alt="Modelo Río exterior">
+                </div>
+                <div class="slide" data-slide>
+                  <img src="assets/modelo-rio-2.jpg" alt="Modelo Río living">
+                </div>
+                <div class="slide" data-slide>
+                  <img src="assets/modelo-rio-3.jpg" alt="Modelo Río cocina">
+                </div>
+              </div>
+              <button class="nav prev" type="button" data-prev aria-label="Imagen anterior de Modelo Río">&#10094;</button>
+              <button class="nav next" type="button" data-next aria-label="Imagen siguiente de Modelo Río">&#10095;</button>
+              <div class="dots" data-dots aria-label="Indicadores de imágenes"></div>
+            </div>
+
+            <a class="cta" href="https://wa.me/549XXXXXXXXXX?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20Modelo%20R%C3%ADo." target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="shell">
+        <h2>Contacto</h2>
+        <div class="contact-grid">
+          <div>
+            <p class="label">Teléfono</p>
+            <p>+54 9 549XXXXXXXXXX</p>
+          </div>
+          <div>
+            <p class="label">Mail</p>
+            <p>info@ejemplo.com</p>
+          </div>
+          <div>
+            <p class="label">Ubicación</p>
+            <p>Ubicación a definir</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <p>Amazonia • Construcción en seco con eficiencia térmica y tiempos reducidos.</p>
+  <footer class="footer">
+    <div class="shell">
+      <p>Catálogo de viviendas modulares • Atención personalizada por WhatsApp</p>
+    </div>
   </footer>
-  <script src="app.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>
