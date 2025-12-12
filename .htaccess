@@ -1,9 +1,0 @@
-RewriteEngine On
-
-# Skip rewrites for existing files or directories
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
-
-# Route all other requests to the SPA entry point
-RewriteRule ^ index.html [L]
