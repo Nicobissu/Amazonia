@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de casas - Amazonia</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container hero">
+      <div>
+        <p class="tag">Construcción en seco • Viviendas modulares</p>
+        <h1>Catálogo de casas Amazonia</h1>
+        <p>Descubrí modelos optimizados, eficientes y listos para habitar en todo el país.</p>
+      </div>
+      <div>
+        <div class="controls">
+          <div>
+            <label for="search">Búsqueda</label>
+            <input type="search" id="search" placeholder="Buscar por nombre o ubicación...">
+          </div>
+          <div>
+            <label for="status">Estado</label>
+            <select id="status">
+              <option value="">Todos</option>
+              <option value="Disponible">Disponible</option>
+              <option value="Reservada">Reservada</option>
+              <option value="Vendida">Vendida</option>
+            </select>
+          </div>
+          <div>
+            <label for="minArea">Mín m²</label>
+            <input type="number" id="minArea" placeholder="Ej: 120" min="0">
+          </div>
+          <div>
+            <label for="bedrooms">Dormitorios</label>
+            <select id="bedrooms">
+              <option value="">Todos</option>
+              <option value="2">Desde 2</option>
+              <option value="3">Desde 3</option>
+              <option value="4">Desde 4</option>
+            </select>
+          </div>
+          <div>
+            <label for="garage">Cochera</label>
+            <select id="garage">
+              <option value="">Todas</option>
+              <option value="true">Con cochera</option>
+              <option value="false">Sin cochera</option>
+            </select>
+          </div>
+          <div>
+            <label for="sort">Ordenar por</label>
+            <select id="sort">
+              <option value="name">Nombre</option>
+              <option value="area">m²</option>
+              <option value="bedrooms">Dormitorios</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="grid" class="grid" aria-live="polite"></div>
+    <div id="empty" class="empty" hidden>Sin resultados. Ajustá filtros o búsqueda.</div>
+  </main>
+
+  <footer>
+    <p>Amazonia • Construcción en seco con eficiencia térmica y tiempos reducidos.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
