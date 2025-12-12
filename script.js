@@ -13,6 +13,10 @@ const houses = [
     sistemaConstructivo: 'Steel Frame / Construcción en seco',
     tiempoEstimadoObra: '5-6 meses',
     features: ['Galería con parrilla', 'Aislación térmica superior', 'Aberturas DVH', 'Listo para paneles solares'],
+    imagenes: [
+      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1616594039964-c2c5b4c8e188?auto=format&fit=crop&w=1200&q=80'
+    ],
     ctaWhatsappLink: 'https://wa.me/5491112345678?text=Hola%20quisiera%20saber%20m%C3%A1s%20sobre%20Casa%20Andes',
     pdfFicha: null
   },
@@ -30,6 +34,10 @@ const houses = [
     sistemaConstructivo: 'Steel Frame / Construcción en seco',
     tiempoEstimadoObra: '4-5 meses',
     features: ['Cocina con isla', 'Galería techada', 'Muros con aislación acústica', 'Listo para climatización central'],
+    imagenes: [
+      'https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1200&q=80'
+    ],
     ctaWhatsappLink: 'https://wa.me/5491112345678?text=Hola%20quisiera%20saber%20m%C3%A1s%20sobre%20Casa%20Pampa',
     pdfFicha: null
   },
@@ -47,6 +55,10 @@ const houses = [
     sistemaConstructivo: 'Steel Frame / Construcción en seco',
     tiempoEstimadoObra: '6-7 meses',
     features: ['Terraza panorámica', 'Sala de estar en doble altura', 'Línea gourmet', 'Terminaciones premium'],
+    imagenes: [
+      'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1200&q=80'
+    ],
     ctaWhatsappLink: 'https://wa.me/5491112345678?text=Hola%20quisiera%20saber%20m%C3%A1s%20sobre%20Casa%20Península',
     pdfFicha: null
   },
@@ -64,6 +76,10 @@ const houses = [
     sistemaConstructivo: 'Steel Frame / Construcción en seco',
     tiempoEstimadoObra: '4 meses',
     features: ['Ventilación cruzada', 'Patio seco', 'Frentes ventilados', 'Aislacin acústica'],
+    imagenes: [
+      'https://images.unsplash.com/photo-1464029902023-f42eba355bde?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1200&q=80'
+    ],
     ctaWhatsappLink: 'https://wa.me/5491112345678?text=Hola%20quisiera%20saber%20m%C3%A1s%20sobre%20Casa%20Litoral',
     pdfFicha: null
   },
@@ -81,6 +97,10 @@ const houses = [
     sistemaConstructivo: 'Steel Frame / Construcción en seco',
     tiempoEstimadoObra: '5-6 meses',
     features: ['Patio central verde', 'Aberturas de piso a techo', 'Pre-instalación solar', 'Climatización eficiente'],
+    imagenes: [
+      'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1430285561322-7808604715df?auto=format&fit=crop&w=1200&q=80'
+    ],
     ctaWhatsappLink: 'https://wa.me/5491112345678?text=Hola%20quisiera%20saber%20m%C3%A1s%20sobre%20Casa%20Norte',
     pdfFicha: null
   },
@@ -98,6 +118,10 @@ const houses = [
     sistemaConstructivo: 'Steel Frame / Construcción en seco',
     tiempoEstimadoObra: '5 meses',
     features: ['Revestimientos símil madera', 'Hogar a leña', 'Grandes aleros', 'Doble vidriado hermético'],
+    imagenes: [
+      'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1200&q=80'
+    ],
     ctaWhatsappLink: 'https://wa.me/5491112345678?text=Hola%20quisiera%20saber%20m%C3%A1s%20sobre%20Casa%20Patagonia',
     pdfFicha: null
   },
@@ -115,6 +139,10 @@ const houses = [
     sistemaConstructivo: 'Steel Frame / Construcción en seco',
     tiempoEstimadoObra: '4-5 meses',
     features: ['Galería corrida', 'Suite principal con vestidor', 'Lavadero independiente', 'Preinstalación para domótica'],
+    imagenes: [
+      'https://images.unsplash.com/photo-1484156818044-c040038b0710?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80'
+    ],
     ctaWhatsappLink: 'https://wa.me/5491112345678?text=Hola%20quisiera%20saber%20m%C3%A1s%20sobre%20Casa%20R%C3%ADo',
     pdfFicha: null
   },
@@ -132,6 +160,10 @@ const houses = [
     sistemaConstructivo: 'Steel Frame / Construcción en seco',
     tiempoEstimadoObra: '3-4 meses',
     features: ['Doble altura en estar', 'Instalaciones listas para aire central', 'Terminaciones rápidas', 'Bajos costos de mantenimiento'],
+    imagenes: [
+      'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1484156818044-c040038b0710?auto=format&fit=crop&w=1200&q=80'
+    ],
     ctaWhatsappLink: 'https://wa.me/5491112345678?text=Hola%20quisiera%20saber%20m%C3%A1s%20sobre%20Casa%20Sur',
     pdfFicha: null
   }
@@ -139,6 +171,106 @@ const houses = [
 
 const statusOrder = { Disponible: 0, 'En obra': 1, Vendido: 2 };
 const sortedHouses = [...houses].sort((a, b) => statusOrder[a.estado] - statusOrder[b.estado]);
+
+const showcaseElements = {
+  image: document.getElementById('showcase-image'),
+  title: document.getElementById('showcase-title'),
+  subtitle: document.getElementById('showcase-subtitle'),
+  description: document.getElementById('showcase-description'),
+  data: document.getElementById('showcase-data'),
+  status: document.getElementById('showcase-status'),
+  selector: document.getElementById('showcase-selector'),
+  progress: document.getElementById('showcase-progress'),
+  prev: document.getElementById('showcase-prev'),
+  next: document.getElementById('showcase-next')
+};
+
+const showcaseState = { index: 0, intervalId: null };
+
+function renderShowcaseData(house) {
+  const stats = [
+    { label: 'Superficie', value: `${house.m2} m²` },
+    { label: 'Dormitorios', value: `${house.habitaciones}` },
+    { label: 'Baños', value: `${house.banos}` },
+    { label: 'Ubicación', value: house.ubicacionAprox },
+    { label: 'Sistema', value: house.sistemaConstructivo },
+    { label: 'Tiempo estimado', value: house.tiempoEstimadoObra }
+  ];
+
+  showcaseElements.data.innerHTML = stats
+    .map(
+      (stat) => `
+        <div>
+          <dt>${stat.label}</dt>
+          <dd>${stat.value}</dd>
+        </div>
+      `
+    )
+    .join('');
+}
+
+function renderShowcaseCard(index) {
+  showcaseState.index = (index + sortedHouses.length) % sortedHouses.length;
+  const house = sortedHouses[showcaseState.index];
+  const badgeClass = `badge badge--${house.estado.replace(' ', '').toLowerCase()}`;
+
+  showcaseElements.image.src = house.imagenes[0];
+  showcaseElements.image.alt = `Vista principal de ${house.nombre}`;
+  showcaseElements.title.textContent = house.nombre;
+  showcaseElements.subtitle.textContent = `${house.m2} m² · ${house.habitaciones} dorm · ${house.estado}`;
+  showcaseElements.description.textContent = house.descripcionCorta;
+  showcaseElements.status.className = `showcase__badge ${badgeClass}`;
+  showcaseElements.status.textContent = house.estado;
+  showcaseElements.progress.textContent = `${showcaseState.index + 1}/${sortedHouses.length}`;
+
+  renderShowcaseData(house);
+
+  document.querySelectorAll('.showcase__chip').forEach((chip, chipIndex) => {
+    chip.classList.toggle('showcase__chip--active', chipIndex === showcaseState.index);
+  });
+}
+
+function createShowcaseSelector() {
+  showcaseElements.selector.innerHTML = sortedHouses
+    .map(
+      (house, index) => `
+        <button class="showcase__chip" data-index="${index}">
+          <strong>${house.nombre}</strong>
+          <span>${house.m2} m² · ${house.estado}</span>
+        </button>
+      `
+    )
+    .join('');
+
+  showcaseElements.selector.addEventListener('click', (event) => {
+    const chip = event.target.closest('.showcase__chip');
+    if (!chip) return;
+    const newIndex = Number(chip.dataset.index);
+    renderShowcaseCard(newIndex);
+    restartShowcaseInterval();
+  });
+}
+
+function restartShowcaseInterval() {
+  if (showcaseState.intervalId) clearInterval(showcaseState.intervalId);
+  showcaseState.intervalId = setInterval(() => renderShowcaseCard(showcaseState.index + 1), 6500);
+}
+
+function initShowcase() {
+  createShowcaseSelector();
+  renderShowcaseCard(0);
+  restartShowcaseInterval();
+
+  showcaseElements.prev.addEventListener('click', () => {
+    renderShowcaseCard(showcaseState.index - 1);
+    restartShowcaseInterval();
+  });
+
+  showcaseElements.next.addEventListener('click', () => {
+    renderShowcaseCard(showcaseState.index + 1);
+    restartShowcaseInterval();
+  });
+}
 
 function renderFacts() {
   const facts = document.getElementById('facts');
@@ -223,5 +355,6 @@ function renderAccordion() {
     .join('');
 }
 
+initShowcase();
 renderFacts();
 renderAccordion();
