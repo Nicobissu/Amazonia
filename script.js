@@ -24,7 +24,8 @@ const amzFeatures = [
 const models = [
   {
     nombre: 'Casa Andes',
-    descripcion: 'Diseño contemporáneo con gran ventanal al jardín.',
+    descripcion:
+      'Luz protagonista, ventanal corrido hacia el jardín y galería lista para asados. Ideal para quienes quieren sentir la naturaleza sin salir del living.',
     m2: 120,
     ambientes: '3 dormitorios · 5 ambientes',
     banos: 2,
@@ -38,7 +39,8 @@ const models = [
   },
   {
     nombre: 'Casa Pampa',
-    descripcion: 'Planta baja integrada pensada para lotes amplios.',
+    descripcion:
+      'Espacios sociales amplios en planta baja y cocina integrada para recibir. Perfecta para familias que buscan convivir y disfrutar de un lote generoso.',
     m2: 98,
     ambientes: '3 dormitorios · 4 ambientes',
     banos: 2,
@@ -52,7 +54,8 @@ const models = [
   },
   {
     nombre: 'Casa Península',
-    descripcion: 'Doble altura y terrazas para vistas abiertas.',
+    descripcion:
+      'Doble altura, terrazas y visuales abiertas para lotes con vistas. Para quienes quieren que cada espacio conecte con el paisaje.',
     m2: 160,
     ambientes: '4 dormitorios · 6 ambientes',
     banos: 3,
@@ -66,7 +69,8 @@ const models = [
   },
   {
     nombre: 'Casa Litoral',
-    descripcion: 'Compacta y funcional para lotes urbanos.',
+    descripcion:
+      'Compacta, eficiente y con circulación clara. Ideal para lotes urbanos o primeras viviendas que priorizan practicidad y confort.',
     m2: 78,
     ambientes: '2 dormitorios · 3 ambientes',
     banos: 2,
@@ -80,7 +84,8 @@ const models = [
   },
   {
     nombre: 'Casa Norte',
-    descripcion: 'Línea minimalista con patio central.',
+    descripcion:
+      'Línea minimalista y patio central que actúa como pulmón de luz. Para quienes buscan un refugio contemporáneo con circulación perimetral.',
     m2: 140,
     ambientes: '3 dormitorios · 5 ambientes',
     banos: 3,
@@ -94,7 +99,8 @@ const models = [
   },
   {
     nombre: 'Casa Patagonia',
-    descripcion: 'Volúmenes escalonados y revestimientos nobles.',
+    descripcion:
+      'Volúmenes escalonados, decks y revestimientos nobles. Pensada para climas fríos y para quienes priorizan abrigo y texturas cálidas.',
     m2: 132,
     ambientes: '3 dormitorios · 5 ambientes',
     banos: 3,
@@ -108,7 +114,8 @@ const models = [
   },
   {
     nombre: 'Casa Río',
-    descripcion: 'Tipología en L con galería corrida.',
+    descripcion:
+      'Tipología en L, galería corrida y visual hacia el patio interno. Perfecta si querés separar el ala social del área privada.',
     m2: 110,
     ambientes: '3 dormitorios · 4 ambientes',
     banos: 2,
@@ -122,7 +129,8 @@ const models = [
   },
   {
     nombre: 'Casa Sur',
-    descripcion: 'Dúplex compacto para primeras viviendas.',
+    descripcion:
+      'Dúplex compacto y luminoso, con planta baja libre y dormitorios arriba. Ideal para primeras viviendas que buscan crecer sin perder confort.',
     m2: 86,
     ambientes: '2 dormitorios · 3 ambientes',
     banos: 2,
@@ -155,20 +163,38 @@ function renderModels() {
   const grid = document.getElementById('models-grid');
   grid.innerHTML = models
     .map(
-      (model) => `
-        <article class="model-card">
+      (model, index) => `
+        <article class="model-card" data-model-index="${index}">
           <header class="model-card__header">
             <div>
-              <p class="badge">${model.m2} m²</p>
               <h3 class="model-card__title">${model.nombre}</h3>
               <p class="model-card__meta">${model.ambientes} · ${model.banos} baños</p>
             </div>
-            <p class="model-card__meta">${model.cochera}</p>
+            <p class="badge">${model.m2} m² · ${model.cochera}</p>
           </header>
           <div class="model-card__body">
-            <div class="model-card__section">
-              <h4>Descripción</h4>
-              <p>${model.descripcion}</p>
+            <div class="model-card__media">
+              <div class="media-gallery" data-gallery="${index}">
+                <div class="media-gallery__slider">
+                  ${model.renders
+                    .map(
+                      (img, imgIndex) => `
+                        <div class="media-gallery__slide" data-slide="${imgIndex}">
+                          <img src="${img}" alt="Render de ${model.nombre}" loading="lazy" />
+                        </div>
+                      `
+                    )
+                    .join('')}
+                </div>
+                <div class="media-gallery__controls">
+                  <button class="gallery-btn" data-direction="prev" aria-label="Imagen anterior">‹</button>
+                  <span class="gallery-counter">1/${model.renders.length}</span>
+                  <button class="gallery-btn" data-direction="next" aria-label="Imagen siguiente">›</button>
+                </div>
+              </div>
+            </div>
+            <div class="model-card__summary">
+              <p class="model-description">${model.descripcion}</p>
               <dl class="data-list">
                 <div><dt>Superficie</dt><dd>${model.m2} m²</dd></div>
                 <div><dt>Ambientes</dt><dd>${model.ambientes}</dd></div>
@@ -176,14 +202,7 @@ function renderModels() {
                 <div><dt>Cocheras</dt><dd>${model.cochera}</dd></div>
               </dl>
             </div>
-            <div class="model-card__section">
-              <h4>Renders</h4>
-              <div class="render-grid">
-                ${model.renders.map((img) => `<img src="${img}" alt="Render de ${model.nombre}" loading="lazy" />`).join('')}
-              </div>
-            </div>
-            <div class="model-card__section">
-              <h4>Planos y video</h4>
+            <div class="asset-rail">
               <div class="assets">
                 <div class="asset-card">
                   <strong>Planos</strong>
@@ -202,5 +221,32 @@ function renderModels() {
     .join('');
 }
 
+function bindGalleries() {
+  document.querySelectorAll('.media-gallery').forEach((gallery) => {
+    const slider = gallery.querySelector('.media-gallery__slider');
+    const slides = slider.children.length;
+    const counter = gallery.querySelector('.gallery-counter');
+    let current = 0;
+
+    function updateSlider() {
+      slider.style.transform = `translateX(-${current * 100}%)`;
+      counter.textContent = `${current + 1}/${slides}`;
+    }
+
+    gallery.querySelectorAll('.gallery-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const direction = btn.dataset.direction;
+        if (direction === 'next') {
+          current = (current + 1) % slides;
+        } else {
+          current = (current - 1 + slides) % slides;
+        }
+        updateSlider();
+      });
+    });
+  });
+}
+
 renderFeatures();
 renderModels();
+bindGalleries();
