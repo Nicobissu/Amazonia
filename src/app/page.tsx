@@ -1,51 +1,167 @@
 import type { Metadata } from 'next';
-import housesData from '@/data/houses.json';
-import CatalogClient from './CatalogClient';
+import type { House } from '@/types/house';
+import houses from '@/data/houses.json';
+
+const typedHouses = houses as House[];
+
+const statusOrder: Record<House['estado'], number> = {
+  Disponible: 0,
+  'En obra': 1,
+  Vendido: 2
+};
+
+const sortedHouses = [...typedHouses].sort((a, b) => statusOrder[a.estado] - statusOrder[b.estado]);
+
+const portfolioStats = sortedHouses.reduce(
+  (acc, house) => {
+    acc.totalArea += house.m2;
+    acc.states[house.estado] = (acc.states[house.estado] ?? 0) + 1;
+    return acc;
+  },
+  { totalArea: 0, states: {} as Record<House['estado'], number> }
+);
 
 export const metadata: Metadata = {
-  title: 'Catálogo de casas | Amazonia',
-  description: 'Casas en seco listas para habitar: rápidas, eficientes y personalizables.'
+  title: 'Documento interactivo | Amazonia',
+  description: 'Resumen legible y accionable sobre el portafolio de viviendas en seco.'
 };
 
 export default function HomePage() {
+  const averageArea = Math.round(portfolioStats.totalArea / sortedHouses.length);
+
   return (
-    <div className="container space-y-10">
-      <section className="grid gap-6 rounded-3xl bg-gradient-to-r from-emerald-50 to-white p-6 md:grid-cols-2 md:p-10">
-        <div className="space-y-4">
-          <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">Casas industriales</p>
-          <h1 className="text-3xl font-bold text-slate-900 md:text-4xl">Casas en seco: rápidas, eficientes y a medida</h1>
-          <p className="text-lg text-slate-700">
-            Elegí tu próxima vivienda con sistemas de construcción en seco, previsibles y listos en meses. Diseñamos y
-            fabricamos en planta para luego montar en obra con mínimo impacto.
-          </p>
-          <a className="btn-primary" href="#catalogo">
-            Ver catálogo
-          </a>
-        </div>
-        <div className="relative overflow-hidden rounded-2xl bg-emerald-900/90 px-6 py-8 text-white shadow-lg">
-          <p className="text-sm uppercase tracking-wide text-emerald-200">Steel frame</p>
-          <h2 className="mt-2 text-2xl font-semibold">Obras limpias y predecibles</h2>
-          <p className="mt-3 text-emerald-50">
-            Montamos en seco, con paneles aislados y carpinterías DVH que garantizan confort térmico. Menos desperdicio, más
-            rapidez.
-          </p>
-          <ul className="mt-4 space-y-2 text-emerald-50">
-            <li>• Tiempos de obra entre 4 y 7 meses</li>
-            <li>• Equipos especializados</li>
-            <li>• Proceso controlado en fábrica</li>
-          </ul>
+    <article className="document">
+      <header className="document__header">
+        <p className="document__eyebrow">Amazonia · Viviendas industrializadas</p>
+        <h1>Documento interactivo del portafolio</h1>
+        <p className="document__lead">
+          Esta versión está pensada como un documento navegable: es liviano, prioriza la lectura y mantiene a mano los datos clave
+          para decidir la próxima obra en seco.
+        </p>
+      </header>
+
+      <section className="panel">
+        <h2>Resumen rápido</h2>
+        <div className="facts">
+          <div className="fact">
+            <p className="fact__label">Casas activas</p>
+            <p className="fact__value">{sortedHouses.length}</p>
+            <p className="fact__hint">Portafolio compacto y curado.</p>
+          </div>
+          <div className="fact">
+            <p className="fact__label">Disponibles</p>
+            <p className="fact__value">{portfolioStats.states['Disponible'] ?? 0}</p>
+            <p className="fact__hint">Listas para coordinar visita.</p>
+          </div>
+          <div className="fact">
+            <p className="fact__label">Promedio m²</p>
+            <p className="fact__value">{averageArea} m²</p>
+            <p className="fact__hint">Escala habitual del catálogo.</p>
+          </div>
+          <div className="fact">
+            <p className="fact__label">En obra</p>
+            <p className="fact__value">{portfolioStats.states['En obra'] ?? 0}</p>
+            <p className="fact__hint">Casos de referencia recientes.</p>
+          </div>
         </div>
       </section>
 
-      <section id="catalogo" className="space-y-4">
-        <div className="flex items-center justify-between">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">Portafolio</p>
-            <h2 className="text-2xl font-semibold text-slate-900">Casas disponibles</h2>
-          </div>
+      <section className="panel">
+        <h2>Viviendas (expandí cada ficha)</h2>
+        <p className="document__hint">
+          Cada bloque resume lo esencial. Abrí la ficha que necesites: incluye descripción corta, métrica rápida y links para
+          pedir más información.
+        </p>
+
+        <div className="accordion">
+          {sortedHouses.map((house, index) => (
+            <details key={house.id} className="accordion__item" open={index === 0}>
+              <summary className="accordion__summary">
+                <div>
+                  <p className="accordion__title">{house.nombre}</p>
+                  <p className="accordion__subtitle">
+                    {house.m2} m² · {house.habitaciones} dorm · {house.estado}
+                  </p>
+                </div>
+                <span className={`badge badge--${house.estado.replace(' ', '').toLowerCase()}`}>{house.estado}</span>
+              </summary>
+
+              <div className="accordion__body">
+                <p className="accordion__text">{house.descripcionCorta}</p>
+
+                <div className="accordion__grid">
+                  <div className="list-block">
+                    <p className="list-block__title">Ficha corta</p>
+                    <dl className="data-list">
+                      <div>
+                        <dt>Superficie</dt>
+                        <dd>{house.m2} m²</dd>
+                      </div>
+                      <div>
+                        <dt>Dormitorios</dt>
+                        <dd>{house.habitaciones}</dd>
+                      </div>
+                      <div>
+                        <dt>Ambientes</dt>
+                        <dd>{house.ambientes}</dd>
+                      </div>
+                      <div>
+                        <dt>Baños</dt>
+                        <dd>{house.banos}</dd>
+                      </div>
+                      <div>
+                        <dt>Ubicación aprox.</dt>
+                        <dd>{house.ubicacionAprox}</dd>
+                      </div>
+                      <div>
+                        <dt>Sistema</dt>
+                        <dd>{house.sistemaConstructivo}</dd>
+                      </div>
+                      <div>
+                        <dt>Tiempo estimado</dt>
+                        <dd>{house.tiempoEstimadoObra}</dd>
+                      </div>
+                      <div>
+                        <dt>Cochera</dt>
+                        <dd>{house.cochera ? 'Sí' : 'No'}</dd>
+                      </div>
+                    </dl>
+                  </div>
+
+                  <div className="list-block">
+                    <p className="list-block__title">Lo que destaca</p>
+                    <ul className="bullet-list">
+                      {house.features.slice(0, 4).map((feature) => (
+                        <li key={feature}>{feature}</li>
+                      ))}
+                    </ul>
+                    <div className="link-stack">
+                      <a className="link" href={house.ctaWhatsappLink} target="_blank" rel="noreferrer">
+                        Coordinar por WhatsApp
+                      </a>
+                      {house.pdfFicha && (
+                        <a className="link" href={house.pdfFicha} download>
+                          Descargar ficha PDF
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </details>
+          ))}
         </div>
-        <CatalogClient houses={housesData} />
       </section>
-    </div>
+
+      <section className="panel">
+        <h2>Notas de proceso</h2>
+        <ul className="bullet-list">
+          <li>Diseño y documentación completa antes de arrancar obra para evitar desvíos en cronograma.</li>
+          <li>Steel frame, panelería aislada y carpinterías DVH como base de confort térmico.</li>
+          <li>Montaje limpio en sitio: equipos propios y visitas programadas para seguimiento.</li>
+          <li>Entrega con terminaciones en seco y supervisión final junto al cliente.</li>
+        </ul>
+      </section>
+    </article>
   );
 }
