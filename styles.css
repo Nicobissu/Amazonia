@@ -306,18 +306,14 @@ body {
 }
 
 .media-gallery {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: #fff;
+  display: grid;
+  gap: 10px;
 }
 
 .media-gallery__slider {
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 100%;
-  transition: transform 0.35s ease;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
 }
 
 .media-gallery__slide img {
@@ -325,38 +321,9 @@ body {
   height: 320px;
   object-fit: cover;
   display: block;
-}
-
-.media-gallery__controls {
-  position: absolute;
-  inset: auto 12px 12px;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(23, 42, 73, 0.85);
-  color: #fff;
-  padding: 8px 10px;
   border-radius: 12px;
-}
-
-.gallery-btn {
-  background: #fff;
-  color: var(--accent);
-  border: none;
-  padding: 6px 10px;
-  border-radius: 8px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: transform 0.15s ease;
-}
-
-.gallery-btn:active {
-  transform: translateY(1px);
-}
-
-.gallery-counter {
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
 .model-card__summary {
