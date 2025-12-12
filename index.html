@@ -3,62 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Documento interactivo | Amazonia</title>
+    <title>Portafolio Amazonia</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <article class="document">
-      <header class="document__header">
-        <p class="document__eyebrow">Amazonia · Viviendas industrializadas</p>
-        <h1>Documento interactivo del portafolio</h1>
-        <p class="document__lead">
-          Esta versión está pensada como un documento navegable: es liviano, prioriza la lectura y mantiene a mano los datos clave para decidir la próxima obra en seco.
-        </p>
-      </header>
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand__logo" aria-hidden="true">A</div>
+        <div>
+          <p class="brand__eyebrow">Amazonia</p>
+          <p class="brand__title">Viviendas industrializadas</p>
+        </div>
+      </div>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="#video">Obra en acción</a>
+        <a href="#amz">Método AMZ</a>
+        <a href="#modelos">Modelos</a>
+      </nav>
+    </header>
 
-      <section class="panel showcase" aria-label="Viviendas destacadas">
-        <div class="showcase__media">
-          <span class="showcase__badge" id="showcase-status"></span>
-          <img id="showcase-image" alt="Casa destacada" />
-          <div class="showcase__controls" aria-label="Controles del carrusel">
-            <button id="showcase-prev" aria-label="Anterior">‹</button>
-            <span id="showcase-progress"></span>
-            <button id="showcase-next" aria-label="Siguiente">›</button>
+    <main class="page">
+      <section class="hero" id="video" aria-label="Video de obra">
+        <div class="hero__overlay">
+          <p class="hero__eyebrow">Video de referencia</p>
+          <h1>Portafolio Amazonia</h1>
+          <p class="hero__lead">
+            El video de obra estará aquí como fondo: muestra el ritmo, el montaje en seco y la velocidad del sistema AMZ.
+          </p>
+          <div class="hero__meta">
+            <span>Obra en ejecución</span>
+            <span>Steel Frame</span>
+            <span>Equipo Amazonia</span>
           </div>
         </div>
-        <div class="showcase__body">
-          <p class="showcase__eyebrow">Selección rotativa</p>
-          <h2 class="showcase__title" id="showcase-title"></h2>
-          <p class="showcase__subtitle" id="showcase-subtitle"></p>
-          <p class="showcase__description" id="showcase-description"></p>
-          <dl class="showcase__data" id="showcase-data"></dl>
-          <div class="showcase__selector" id="showcase-selector" aria-label="Elegir casa"></div>
+        <div class="hero__video" aria-hidden="true">
+          <div class="video-placeholder">
+            <p>Área reservada para el video de obra</p>
+            <span>Podés reemplazarlo por tu video de fondo.</span>
+          </div>
         </div>
       </section>
 
-      <section class="panel">
-        <h2>Resumen rápido</h2>
-        <div class="facts" id="facts"></div>
+      <section class="panel" id="amz" aria-labelledby="amz-title">
+        <div class="section-header">
+          <p class="section-eyebrow">Método AMZ</p>
+          <div>
+            <h2 id="amz-title">Características constructivas</h2>
+            <p class="section-lead">
+              Nuestro método AMZ combina prefabricación, steel frame y terminaciones en seco. Estas son las claves que usamos en cada casa.
+            </p>
+          </div>
+        </div>
+        <div class="feature-grid" id="amz-features"></div>
       </section>
 
-      <section class="panel">
-        <h2>Viviendas (expandí cada ficha)</h2>
-        <p class="document__hint">
-          Cada bloque resume lo esencial. Abrí la ficha que necesites: incluye descripción corta, métrica rápida y links para pedir más información.
-        </p>
-        <div class="accordion" id="accordion"></div>
+      <section class="panel" id="modelos" aria-labelledby="modelos-title">
+        <div class="section-header">
+          <p class="section-eyebrow">Catálogo 2024</p>
+          <div>
+            <h2 id="modelos-title">Modelos de casas Amazonia</h2>
+            <p class="section-lead">Ocho modelos listos para obra, cada uno con descripción, renders y material técnico.</p>
+          </div>
+        </div>
+        <div class="models-grid" id="models-grid"></div>
       </section>
-
-      <section class="panel">
-        <h2>Notas de proceso</h2>
-        <ul class="bullet-list">
-          <li>Diseño y documentación completa antes de arrancar obra para evitar desvíos en cronograma.</li>
-          <li>Steel frame, panelería aislada y carpinterías DVH como base de confort térmico.</li>
-          <li>Montaje limpio en sitio: equipos propios y visitas programadas para seguimiento.</li>
-          <li>Entrega con terminaciones en seco y supervisión final junto al cliente.</li>
-        </ul>
-      </section>
-    </article>
+    </main>
 
     <script src="script.js"></script>
   </body>
