@@ -31,22 +31,18 @@
   <main>
     
     <section class="hero" id="obra">
-      <div class="hero__video">
+      <div class="hero__media">
         <!-- VIDEO: subi tu archivo a la carpeta "videos" y cambia el nombre -->
-        <video class="video" controls>
+        <video class="video" autoplay muted loop playsinline>
           <source src="videos/obra.mp4" type="video/mp4">
           Tu navegador no soporta video.
         </video>
       </div>
+      <div class="hero__overlay"></div>
       <div class="hero__content">
         <span class="label">Obra en accion</span>
-        <h1>Construimos tu casa <em>en taller</em></h1>
-        <p>8 modelos listos para instalar en tu terreno. Llave en mano.</p>
-        <div class="tags">
-          <span class="tag">Steel Frame</span>
-          <span class="tag">Montaje en seco</span>
-          <span class="tag">Entrega 90 dias</span>
-        </div>
+        <h1>Casas listas para habitar en 90 dias</h1>
+        <p>Proceso industrializado, control de calidad y diseno minimalista que deja hablar a la luz.</p>
       </div>
     </section>
 
@@ -61,25 +57,25 @@
         <article class="feature">
           <span class="feature__tag">Steel Frame</span>
           <h3>Estructura AMZ</h3>
-          <p>Perfiles galvanizados calibrados y paneles modulares.</p>
+          <p>Perfiles galvanizados calibrados y paneles modulares listos para tu lote, sin improvisaciones.</p>
         </article>
-        
+
         <article class="feature">
           <span class="feature__tag">Aislacion</span>
           <h3>Capa termica</h3>
-          <p>Muros con espuma, lana mineral y DVH para confort.</p>
+          <p>Muros con espuma, lana mineral y DVH que mantienen el confort y bajan consumos.</p>
         </article>
-        
+
         <article class="feature">
           <span class="feature__tag">Velocidad</span>
           <h3>Prefabricacion</h3>
-          <p>Kit listo para montar, tiempos reducidos.</p>
+          <p>Kit listo para montar, tiempos reducidos y obra seca para evitar retrasos.</p>
         </article>
-        
+
         <article class="feature">
           <span class="feature__tag">Detalles</span>
           <h3>Terminaciones en seco</h3>
-          <p>Placas listas para pintar que aceleran entrega.</p>
+          <p>Placas listas para pintar, instalaciones ocultas y zocalos alineados al diseno.</p>
         </article>
       </div>
     </section>
@@ -91,21 +87,34 @@
       </div>
 
       <div class="models">
-        
+
         <!-- CASA ANDES -->
         <article class="model">
           <div class="model__head">
-            <h3>Casa Andes</h3>
-            <span class="badge">120 m2</span>
-          </div>
-          <div class="model__body">
-            <div class="model__gallery">
-              <img src="imagenes/andes-1.jpg" alt="Casa Andes">
-              <img src="imagenes/andes-2.jpg" alt="Casa Andes interior">
+            <div>
+              <h3>Casa Andes</h3>
+              <p class="model__headline">120 m2 · 3 dorm · 5 amb · 2 banos · Cochera cubierta</p>
             </div>
-            <div class="model__info">
-              <p>3 dorm - 5 amb - 2 banos - Cochera cubierta</p>
+            <span class="badge">Premium light</span>
+          </div>
+          <div class="model__layout">
+            <aside class="model__details">
               <p>Luz protagonista, ventanal corrido hacia el jardin y galeria lista para asados.</p>
+              <ul>
+                <li>Suite principal con vestidor.</li>
+                <li>Galeria integrada a cocina y living.</li>
+                <li>Listo para lotes amplios.</li>
+              </ul>
+            </aside>
+            <div class="model__visual" data-interval="4500">
+              <div class="model__gallery">
+                <img class="slide active" src="imagenes/andes-1.jpg" alt="Casa Andes">
+                <img class="slide" src="imagenes/andes-2.jpg" alt="Casa Andes interior">
+              </div>
+              <div class="model__actions">
+                <a class="btn btn--ghost" href="#">Ver planos</a>
+                <a class="btn" href="#">Ver video</a>
+              </div>
             </div>
           </div>
         </article>
@@ -113,17 +122,30 @@
         <!-- CASA PAMPA -->
         <article class="model">
           <div class="model__head">
-            <h3>Casa Pampa</h3>
-            <span class="badge">98 m2</span>
-          </div>
-          <div class="model__body">
-            <div class="model__gallery">
-              <img src="imagenes/pampa-1.jpg" alt="Casa Pampa">
-              <img src="imagenes/pampa-2.jpg" alt="Casa Pampa interior">
+            <div>
+              <h3>Casa Pampa</h3>
+              <p class="model__headline">98 m2 · 3 dorm · 4 amb · 2 banos · 2 autos</p>
             </div>
-            <div class="model__info">
-              <p>3 dorm - 4 amb - 2 banos - 2 autos</p>
+            <span class="badge">Familiar</span>
+          </div>
+          <div class="model__layout">
+            <aside class="model__details">
               <p>Espacios sociales amplios y cocina integrada para recibir.</p>
+              <ul>
+                <li>Living comedor integrado a isla.</li>
+                <li>Galeria semicubierta lista para parrilla.</li>
+                <li>Fachada limpia con texturas calidas.</li>
+              </ul>
+            </aside>
+            <div class="model__visual" data-interval="4200">
+              <div class="model__gallery">
+                <img class="slide active" src="imagenes/pampa-1.jpg" alt="Casa Pampa">
+                <img class="slide" src="imagenes/pampa-2.jpg" alt="Casa Pampa interior">
+              </div>
+              <div class="model__actions">
+                <a class="btn btn--ghost" href="#">Ver planos</a>
+                <a class="btn" href="#">Ver video</a>
+              </div>
             </div>
           </div>
         </article>
@@ -131,17 +153,30 @@
         <!-- CASA PENINSULA -->
         <article class="model">
           <div class="model__head">
-            <h3>Casa Peninsula</h3>
-            <span class="badge badge--premium">160 m2</span>
-          </div>
-          <div class="model__body">
-            <div class="model__gallery">
-              <img src="imagenes/peninsula-1.jpg" alt="Casa Peninsula">
-              <img src="imagenes/peninsula-2.jpg" alt="Casa Peninsula interior">
+            <div>
+              <h3>Casa Peninsula</h3>
+              <p class="model__headline">160 m2 · 4 dorm · 6 amb · 3 banos · Garage lateral</p>
             </div>
-            <div class="model__info">
-              <p>4 dorm - 6 amb - 3 banos - Garage lateral</p>
+            <span class="badge badge--premium">Signature</span>
+          </div>
+          <div class="model__layout">
+            <aside class="model__details">
               <p>Doble altura, terrazas y visuales abiertas para lotes con vistas.</p>
+              <ul>
+                <li>Puente balconando sobre el estar.</li>
+                <li>Terraza privada en suite principal.</li>
+                <li>Ventanas piso a techo con DVH.</li>
+              </ul>
+            </aside>
+            <div class="model__visual" data-interval="4800">
+              <div class="model__gallery">
+                <img class="slide active" src="imagenes/peninsula-1.jpg" alt="Casa Peninsula">
+                <img class="slide" src="imagenes/peninsula-2.jpg" alt="Casa Peninsula interior">
+              </div>
+              <div class="model__actions">
+                <a class="btn btn--ghost" href="#">Ver planos</a>
+                <a class="btn" href="#">Ver video</a>
+              </div>
             </div>
           </div>
         </article>
@@ -149,17 +184,30 @@
         <!-- CASA LITORAL -->
         <article class="model">
           <div class="model__head">
-            <h3>Casa Litoral</h3>
-            <span class="badge">78 m2</span>
-          </div>
-          <div class="model__body">
-            <div class="model__gallery">
-              <img src="imagenes/litoral-1.jpg" alt="Casa Litoral">
-              <img src="imagenes/litoral-2.jpg" alt="Casa Litoral interior">
+            <div>
+              <h3>Casa Litoral</h3>
+              <p class="model__headline">78 m2 · 2 dorm · 3 amb · 2 banos · Descubierto</p>
             </div>
-            <div class="model__info">
-              <p>2 dorm - 3 amb - 2 banos - Descubierto</p>
+            <span class="badge">Compacta</span>
+          </div>
+          <div class="model__layout">
+            <aside class="model__details">
               <p>Compacta y eficiente. Ideal para lotes urbanos.</p>
+              <ul>
+                <li>Expande el living a un patio interior.</li>
+                <li>Circulaciones optimizadas para aprovechar m2.</li>
+                <li>Listo para ampliaciones futuras.</li>
+              </ul>
+            </aside>
+            <div class="model__visual" data-interval="4300">
+              <div class="model__gallery">
+                <img class="slide active" src="imagenes/litoral-1.jpg" alt="Casa Litoral">
+                <img class="slide" src="imagenes/litoral-2.jpg" alt="Casa Litoral interior">
+              </div>
+              <div class="model__actions">
+                <a class="btn btn--ghost" href="#">Ver planos</a>
+                <a class="btn" href="#">Ver video</a>
+              </div>
             </div>
           </div>
         </article>
@@ -167,17 +215,30 @@
         <!-- CASA NORTE -->
         <article class="model">
           <div class="model__head">
-            <h3>Casa Norte</h3>
-            <span class="badge">140 m2</span>
-          </div>
-          <div class="model__body">
-            <div class="model__gallery">
-              <img src="imagenes/norte-1.jpg" alt="Casa Norte">
-              <img src="imagenes/norte-2.jpg" alt="Casa Norte interior">
+            <div>
+              <h3>Casa Norte</h3>
+              <p class="model__headline">140 m2 · 3 dorm · 5 amb · 3 banos · Cochera doble</p>
             </div>
-            <div class="model__info">
-              <p>3 dorm - 5 amb - 3 banos - Cochera doble</p>
+            <span class="badge">Luminosa</span>
+          </div>
+          <div class="model__layout">
+            <aside class="model__details">
               <p>Linea minimalista y patio central como pulmon de luz.</p>
+              <ul>
+                <li>Patio vidriado que ordena la planta.</li>
+                <li>Galeria lineal vinculada a living.</li>
+                <li>Ingresos diferenciados para servicio.</li>
+              </ul>
+            </aside>
+            <div class="model__visual" data-interval="4000">
+              <div class="model__gallery">
+                <img class="slide active" src="imagenes/norte-1.jpg" alt="Casa Norte">
+                <img class="slide" src="imagenes/norte-2.jpg" alt="Casa Norte interior">
+              </div>
+              <div class="model__actions">
+                <a class="btn btn--ghost" href="#">Ver planos</a>
+                <a class="btn" href="#">Ver video</a>
+              </div>
             </div>
           </div>
         </article>
@@ -185,17 +246,30 @@
         <!-- CASA PATAGONIA -->
         <article class="model">
           <div class="model__head">
-            <h3>Casa Patagonia</h3>
-            <span class="badge">132 m2</span>
-          </div>
-          <div class="model__body">
-            <div class="model__gallery">
-              <img src="imagenes/patagonia-1.jpg" alt="Casa Patagonia">
-              <img src="imagenes/patagonia-2.jpg" alt="Casa Patagonia interior">
+            <div>
+              <h3>Casa Patagonia</h3>
+              <p class="model__headline">132 m2 · 3 dorm · 5 amb · 3 banos · Semi-cubierta</p>
             </div>
-            <div class="model__info">
-              <p>3 dorm - 5 amb - 3 banos - Semi-cubierta</p>
+            <span class="badge">Refugio</span>
+          </div>
+          <div class="model__layout">
+            <aside class="model__details">
               <p>Volumenes escalonados y revestimientos nobles para climas frios.</p>
+              <ul>
+                <li>Paneles aislantes reforzados.</li>
+                <li>Chimenea lista para instalar.</li>
+                <li>Circulacion semicubierta al exterior.</li>
+              </ul>
+            </aside>
+            <div class="model__visual" data-interval="4700">
+              <div class="model__gallery">
+                <img class="slide active" src="imagenes/patagonia-1.jpg" alt="Casa Patagonia">
+                <img class="slide" src="imagenes/patagonia-2.jpg" alt="Casa Patagonia interior">
+              </div>
+              <div class="model__actions">
+                <a class="btn btn--ghost" href="#">Ver planos</a>
+                <a class="btn" href="#">Ver video</a>
+              </div>
             </div>
           </div>
         </article>
@@ -203,17 +277,30 @@
         <!-- CASA RIO -->
         <article class="model">
           <div class="model__head">
-            <h3>Casa Rio</h3>
-            <span class="badge">110 m2</span>
-          </div>
-          <div class="model__body">
-            <div class="model__gallery">
-              <img src="imagenes/rio-1.jpg" alt="Casa Rio">
-              <img src="imagenes/rio-2.jpg" alt="Casa Rio interior">
+            <div>
+              <h3>Casa Rio</h3>
+              <p class="model__headline">110 m2 · 3 dorm · 4 amb · 2 banos · Cochera abierta</p>
             </div>
-            <div class="model__info">
-              <p>3 dorm - 4 amb - 2 banos - Cochera abierta</p>
+            <span class="badge">L en patio</span>
+          </div>
+          <div class="model__layout">
+            <aside class="model__details">
               <p>Tipologia en L con galeria corrida y visual al patio.</p>
+              <ul>
+                <li>Living con vidrio esquinero.</li>
+                <li>Galeria techada en el pliegue.</li>
+                <li>Suite con salida al jardin.</li>
+              </ul>
+            </aside>
+            <div class="model__visual" data-interval="4100">
+              <div class="model__gallery">
+                <img class="slide active" src="imagenes/rio-1.jpg" alt="Casa Rio">
+                <img class="slide" src="imagenes/rio-2.jpg" alt="Casa Rio interior">
+              </div>
+              <div class="model__actions">
+                <a class="btn btn--ghost" href="#">Ver planos</a>
+                <a class="btn" href="#">Ver video</a>
+              </div>
             </div>
           </div>
         </article>
@@ -221,17 +308,30 @@
         <!-- CASA SUR -->
         <article class="model">
           <div class="model__head">
-            <h3>Casa Sur</h3>
-            <span class="badge">86 m2</span>
-          </div>
-          <div class="model__body">
-            <div class="model__gallery">
-              <img src="imagenes/sur-1.jpg" alt="Casa Sur">
-              <img src="imagenes/sur-2.jpg" alt="Casa Sur interior">
+            <div>
+              <h3>Casa Sur</h3>
+              <p class="model__headline">86 m2 · 2 dorm · 3 amb · 2 banos · Sin cochera</p>
             </div>
-            <div class="model__info">
-              <p>2 dorm - 3 amb - 2 banos - Sin cochera</p>
+            <span class="badge">Duplex</span>
+          </div>
+          <div class="model__layout">
+            <aside class="model__details">
               <p>Duplex compacto con planta baja libre y dormitorios arriba.</p>
+              <ul>
+                <li>Gran ventanal a patio privado.</li>
+                <li>Planta baja flexible para home-office.</li>
+                <li>Volumen escalonado con balcon frances.</li>
+              </ul>
+            </aside>
+            <div class="model__visual" data-interval="3900">
+              <div class="model__gallery">
+                <img class="slide active" src="imagenes/sur-1.jpg" alt="Casa Sur">
+                <img class="slide" src="imagenes/sur-2.jpg" alt="Casa Sur interior">
+              </div>
+              <div class="model__actions">
+                <a class="btn btn--ghost" href="#">Ver planos</a>
+                <a class="btn" href="#">Ver video</a>
+              </div>
             </div>
           </div>
         </article>
@@ -250,6 +350,24 @@
   <footer class="footer">
     <p><strong>Amazonia</strong> - Viviendas industrializadas - 2024</p>
   </footer>
+
+  <script>
+  const galleries = document.querySelectorAll('.model__visual');
+
+  galleries.forEach((visual) => {
+    const slides = visual.querySelectorAll('.slide');
+    let index = 0;
+    const delay = Number(visual.dataset.interval) || 4500;
+
+    if (slides.length < 2) return;
+
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, delay);
+  });
+  </script>
 
 </body>
 </html>
