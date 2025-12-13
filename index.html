@@ -1,351 +1,255 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portafolio Amazonia</title>
-    <link rel="preload" href="./styles.css" as="style" />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="brand">
-        <div class="brand__logo" aria-hidden="true">A</div>
-        <div>
-          <p class="brand__eyebrow">Amazonia</p>
-          <p class="brand__title">Viviendas industrializadas</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazonia - Viviendas Industrializadas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__inner">
+      <a href="#" class="logo">
+        <span class="logo__icon">A</span>
+        <span class="logo__text">
+          <strong>Amazonia</strong>
+          <small>Viviendas industrializadas</small>
+        </span>
+      </a>
+      
+      <nav class="nav">
+        <a href="#obra" class="nav__link">Obra</a>
+        <a href="#metodo" class="nav__link">Metodo</a>
+        <a href="#modelos" class="nav__link">Modelos</a>
+        <a href="#contacto" class="nav__link nav__link--cta">Contactar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+    <section class="hero" id="obra">
+      <div class="hero__video">
+        <!-- VIDEO: subi tu archivo a la carpeta "videos" y cambia el nombre -->
+        <video class="video" controls>
+          <source src="videos/obra.mp4" type="video/mp4">
+          Tu navegador no soporta video.
+        </video>
+      </div>
+      <div class="hero__content">
+        <span class="label">Obra en accion</span>
+        <h1>Construimos tu casa <em>en taller</em></h1>
+        <p>8 modelos listos para instalar en tu terreno. Llave en mano.</p>
+        <div class="tags">
+          <span class="tag">Steel Frame</span>
+          <span class="tag">Montaje en seco</span>
+          <span class="tag">Entrega 90 dias</span>
         </div>
       </div>
-      <nav class="site-nav" aria-label="Navegación principal">
-        <a href="#video">Obra en acción</a>
-        <a href="#amz">Método AMZ</a>
-        <a href="#modelos">Modelos</a>
-      </nav>
-    </header>
+    </section>
 
-    <main class="page">
-      <section class="hero" id="video" aria-label="Video de obra">
-        <p class="hero__eyebrow">Obra en acción</p>
-        <h1>Portafolio Amazonia</h1>
-        <p class="hero__lede">
-          Seguimos cada proyecto de cerca. Este portafolio recopila avances, montaje y
-          los estándares que usamos en obra.
-        </p>
-        <div class="hero__meta">
-          <span>Steel Frame</span>
-          <span>Montaje en seco</span>
-          <span>Equipo Amazonia</span>
-        </div>
-      </section>
+    <section class="section" id="metodo">
+      <div class="section__header">
+        <span class="label">Metodo AMZ</span>
+        <h2>Por que construccion industrializada?</h2>
+        <p>Prefabricamos cada panel en taller. Menos tiempo, menos desperdicio, mejor calidad.</p>
+      </div>
+      
+      <div class="features">
+        <article class="feature">
+          <span class="feature__tag">Steel Frame</span>
+          <h3>Estructura AMZ</h3>
+          <p>Perfiles galvanizados calibrados y paneles modulares.</p>
+        </article>
+        
+        <article class="feature">
+          <span class="feature__tag">Aislacion</span>
+          <h3>Capa termica</h3>
+          <p>Muros con espuma, lana mineral y DVH para confort.</p>
+        </article>
+        
+        <article class="feature">
+          <span class="feature__tag">Velocidad</span>
+          <h3>Prefabricacion</h3>
+          <p>Kit listo para montar, tiempos reducidos.</p>
+        </article>
+        
+        <article class="feature">
+          <span class="feature__tag">Detalles</span>
+          <h3>Terminaciones en seco</h3>
+          <p>Placas listas para pintar que aceleran entrega.</p>
+        </article>
+      </div>
+    </section>
 
-      <section class="panel" id="amz" aria-labelledby="amz-title">
-        <div class="section-header">
-          <p class="section-eyebrow">Método AMZ</p>
-          <div>
-            <h2 id="amz-title">Características constructivas</h2>
-            <p class="section-lead">
-              Nuestro método AMZ combina prefabricación, steel frame y terminaciones en seco. Estas son las claves que usamos en cada casa.
-            </p>
+    <section class="section section--alt" id="modelos">
+      <div class="section__header section__header--center">
+        <span class="label">Catalogo 2024</span>
+        <h2>Nuestros 8 modelos</h2>
+      </div>
+
+      <div class="models">
+        
+        <!-- CASA ANDES -->
+        <article class="model">
+          <div class="model__head">
+            <h3>Casa Andes</h3>
+            <span class="badge">120 m2</span>
           </div>
-        </div>
-        <div class="feature-grid">
-          <article class="feature-card">
-            <span class="feature-card__tag">Steel Frame</span>
-            <h3>Estructura AMZ</h3>
-            <p>Perfiles galvanizados calibrados, paneles modulares y control de torsión para ajustes rápidos en sitio.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-card__tag">Aislación</span>
-            <h3>Capa térmica</h3>
-            <p>Muros con espuma + lana mineral, placas cementicias y DVH para confort en climas variados.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-card__tag">Velocidad</span>
-            <h3>Prefabricación</h3>
-            <p>Kit industrializado listo para montar: reduces desperdicio, tiempos y ruido en obra.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-card__tag">Detalles</span>
-            <h3>Terminaciones en seco</h3>
-            <p>Placas interiores listas para pintar, cielorrasos técnicos y zócalos que aceleran entrega.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="panel" id="modelos" aria-labelledby="modelos-title">
-        <div class="section-header">
-          <p class="section-eyebrow">Catálogo 2024</p>
-          <div>
-            <h2 id="modelos-title">Modelos de casas Amazonia</h2>
-            <p class="section-lead">Ocho modelos listos para obra, cada uno con descripción, renders y material técnico.</p>
+          <div class="model__body">
+            <div class="model__gallery">
+              <img src="imagenes/andes-1.jpg" alt="Casa Andes">
+              <img src="imagenes/andes-2.jpg" alt="Casa Andes interior">
+            </div>
+            <div class="model__info">
+              <p>3 dorm - 5 amb - 2 banos - Cochera cubierta</p>
+              <p>Luz protagonista, ventanal corrido hacia el jardin y galeria lista para asados.</p>
+            </div>
           </div>
-        </div>
-        <div class="models-grid">
-          <article class="model-card">
-            <header class="model-card__header">
-              <div>
-                <h3 class="model-card__title">Casa Andes</h3>
-                <p class="model-card__meta">3 dormitorios · 5 ambientes · 2 baños</p>
-              </div>
-              <p class="badge">120 m² · Cochera cubierta</p>
-            </header>
-            <div class="model-card__body">
-              <div class="model-card__summary">
-                <p class="model-description">Luz protagonista, ventanal corrido hacia el jardín y galería lista para asados. Ideal para quienes quieren sentir la naturaleza sin salir del living.</p>
-                <dl class="data-list">
-                  <div><dt>Superficie</dt><dd>120 m²</dd></div>
-                  <div><dt>Ambientes</dt><dd>3 dormitorios · 5 ambientes</dd></div>
-                  <div><dt>Baños</dt><dd>2</dd></div>
-                  <div><dt>Cocheras</dt><dd>Cochera cubierta</dd></div>
-                </dl>
-              </div>
-              <div class="asset-rail">
-                <div class="assets">
-                  <div class="asset-card">
-                    <strong>Planos</strong>
-                    <p class="asset-note">Planos ejecutivos disponibles en formato digital.</p>
-                  </div>
-                  <div class="asset-card">
-                    <strong>Video</strong>
-                    <p class="asset-note">Recorrido virtual en producción.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
+        </article>
 
-          <article class="model-card">
-            <header class="model-card__header">
-              <div>
-                <h3 class="model-card__title">Casa Pampa</h3>
-                <p class="model-card__meta">3 dormitorios · 4 ambientes · 2 baños</p>
-              </div>
-              <p class="badge">98 m² · Espacio para dos autos</p>
-            </header>
-            <div class="model-card__body">
-              <div class="model-card__summary">
-                <p class="model-description">Espacios sociales amplios en planta baja y cocina integrada para recibir. Perfecta para familias que buscan convivir y disfrutar de un lote generoso.</p>
-                <dl class="data-list">
-                  <div><dt>Superficie</dt><dd>98 m²</dd></div>
-                  <div><dt>Ambientes</dt><dd>3 dormitorios · 4 ambientes</dd></div>
-                  <div><dt>Baños</dt><dd>2</dd></div>
-                  <div><dt>Cocheras</dt><dd>Espacio para dos autos</dd></div>
-                </dl>
-              </div>
-              <div class="asset-rail">
-                <div class="assets">
-                  <div class="asset-card">
-                    <strong>Planos</strong>
-                    <p class="asset-note">Planos listos para compartir con el equipo de obra.</p>
-                  </div>
-                  <div class="asset-card">
-                    <strong>Video</strong>
-                    <p class="asset-note">Video de obra en edición.</p>
-                  </div>
-                </div>
-              </div>
+        <!-- CASA PAMPA -->
+        <article class="model">
+          <div class="model__head">
+            <h3>Casa Pampa</h3>
+            <span class="badge">98 m2</span>
+          </div>
+          <div class="model__body">
+            <div class="model__gallery">
+              <img src="imagenes/pampa-1.jpg" alt="Casa Pampa">
+              <img src="imagenes/pampa-2.jpg" alt="Casa Pampa interior">
             </div>
-          </article>
+            <div class="model__info">
+              <p>3 dorm - 4 amb - 2 banos - 2 autos</p>
+              <p>Espacios sociales amplios y cocina integrada para recibir.</p>
+            </div>
+          </div>
+        </article>
 
-          <article class="model-card">
-            <header class="model-card__header">
-              <div>
-                <h3 class="model-card__title">Casa Península</h3>
-                <p class="model-card__meta">4 dormitorios · 6 ambientes · 3 baños</p>
-              </div>
-              <p class="badge">160 m² · Garage lateral</p>
-            </header>
-            <div class="model-card__body">
-              <div class="model-card__summary">
-                <p class="model-description">Doble altura, terrazas y visuales abiertas para lotes con vistas. Para quienes quieren que cada espacio conecte con el paisaje.</p>
-                <dl class="data-list">
-                  <div><dt>Superficie</dt><dd>160 m²</dd></div>
-                  <div><dt>Ambientes</dt><dd>4 dormitorios · 6 ambientes</dd></div>
-                  <div><dt>Baños</dt><dd>3</dd></div>
-                  <div><dt>Cocheras</dt><dd>Garage lateral</dd></div>
-                </dl>
-              </div>
-              <div class="asset-rail">
-                <div class="assets">
-                  <div class="asset-card">
-                    <strong>Planos</strong>
-                    <p class="asset-note">Planos ejecutivos disponibles para consulta.</p>
-                  </div>
-                  <div class="asset-card">
-                    <strong>Video</strong>
-                    <p class="asset-note">Tour en 3D programado.</p>
-                  </div>
-                </div>
-              </div>
+        <!-- CASA PENINSULA -->
+        <article class="model">
+          <div class="model__head">
+            <h3>Casa Peninsula</h3>
+            <span class="badge badge--premium">160 m2</span>
+          </div>
+          <div class="model__body">
+            <div class="model__gallery">
+              <img src="imagenes/peninsula-1.jpg" alt="Casa Peninsula">
+              <img src="imagenes/peninsula-2.jpg" alt="Casa Peninsula interior">
             </div>
-          </article>
+            <div class="model__info">
+              <p>4 dorm - 6 amb - 3 banos - Garage lateral</p>
+              <p>Doble altura, terrazas y visuales abiertas para lotes con vistas.</p>
+            </div>
+          </div>
+        </article>
 
-          <article class="model-card">
-            <header class="model-card__header">
-              <div>
-                <h3 class="model-card__title">Casa Litoral</h3>
-                <p class="model-card__meta">2 dormitorios · 3 ambientes · 2 baños</p>
-              </div>
-              <p class="badge">78 m² · Espacio descubierto</p>
-            </header>
-            <div class="model-card__body">
-              <div class="model-card__summary">
-                <p class="model-description">Compacta, eficiente y con circulación clara. Ideal para lotes urbanos o primeras viviendas que priorizan practicidad y confort.</p>
-                <dl class="data-list">
-                  <div><dt>Superficie</dt><dd>78 m²</dd></div>
-                  <div><dt>Ambientes</dt><dd>2 dormitorios · 3 ambientes</dd></div>
-                  <div><dt>Baños</dt><dd>2</dd></div>
-                  <div><dt>Cocheras</dt><dd>Espacio descubierto</dd></div>
-                </dl>
-              </div>
-              <div class="asset-rail">
-                <div class="assets">
-                  <div class="asset-card">
-                    <strong>Planos</strong>
-                    <p class="asset-note">Planos de detalle listos para descarga.</p>
-                  </div>
-                  <div class="asset-card">
-                    <strong>Video</strong>
-                    <p class="asset-note">Video compacto en revisión.</p>
-                  </div>
-                </div>
-              </div>
+        <!-- CASA LITORAL -->
+        <article class="model">
+          <div class="model__head">
+            <h3>Casa Litoral</h3>
+            <span class="badge">78 m2</span>
+          </div>
+          <div class="model__body">
+            <div class="model__gallery">
+              <img src="imagenes/litoral-1.jpg" alt="Casa Litoral">
+              <img src="imagenes/litoral-2.jpg" alt="Casa Litoral interior">
             </div>
-          </article>
+            <div class="model__info">
+              <p>2 dorm - 3 amb - 2 banos - Descubierto</p>
+              <p>Compacta y eficiente. Ideal para lotes urbanos.</p>
+            </div>
+          </div>
+        </article>
 
-          <article class="model-card">
-            <header class="model-card__header">
-              <div>
-                <h3 class="model-card__title">Casa Norte</h3>
-                <p class="model-card__meta">3 dormitorios · 5 ambientes · 3 baños</p>
-              </div>
-              <p class="badge">140 m² · Cochera doble</p>
-            </header>
-            <div class="model-card__body">
-              <div class="model-card__summary">
-                <p class="model-description">Línea minimalista y patio central que actúa como pulmón de luz. Para quienes buscan un refugio contemporáneo con circulación perimetral.</p>
-                <dl class="data-list">
-                  <div><dt>Superficie</dt><dd>140 m²</dd></div>
-                  <div><dt>Ambientes</dt><dd>3 dormitorios · 5 ambientes</dd></div>
-                  <div><dt>Baños</dt><dd>3</dd></div>
-                  <div><dt>Cocheras</dt><dd>Cochera doble</dd></div>
-                </dl>
-              </div>
-              <div class="asset-rail">
-                <div class="assets">
-                  <div class="asset-card">
-                    <strong>Planos</strong>
-                    <p class="asset-note">Planos listos para revisión técnica.</p>
-                  </div>
-                  <div class="asset-card">
-                    <strong>Video</strong>
-                    <p class="asset-note">Recorrido con cliente en producción.</p>
-                  </div>
-                </div>
-              </div>
+        <!-- CASA NORTE -->
+        <article class="model">
+          <div class="model__head">
+            <h3>Casa Norte</h3>
+            <span class="badge">140 m2</span>
+          </div>
+          <div class="model__body">
+            <div class="model__gallery">
+              <img src="imagenes/norte-1.jpg" alt="Casa Norte">
+              <img src="imagenes/norte-2.jpg" alt="Casa Norte interior">
             </div>
-          </article>
+            <div class="model__info">
+              <p>3 dorm - 5 amb - 3 banos - Cochera doble</p>
+              <p>Linea minimalista y patio central como pulmon de luz.</p>
+            </div>
+          </div>
+        </article>
 
-          <article class="model-card">
-            <header class="model-card__header">
-              <div>
-                <h3 class="model-card__title">Casa Patagonia</h3>
-                <p class="model-card__meta">3 dormitorios · 5 ambientes · 3 baños</p>
-              </div>
-              <p class="badge">132 m² · Cochera semi-cubierta</p>
-            </header>
-            <div class="model-card__body">
-              <div class="model-card__summary">
-                <p class="model-description">Volúmenes escalonados, decks y revestimientos nobles. Pensada para climas fríos y para quienes priorizan abrigo y texturas cálidas.</p>
-                <dl class="data-list">
-                  <div><dt>Superficie</dt><dd>132 m²</dd></div>
-                  <div><dt>Ambientes</dt><dd>3 dormitorios · 5 ambientes</dd></div>
-                  <div><dt>Baños</dt><dd>3</dd></div>
-                  <div><dt>Cocheras</dt><dd>Cochera semi-cubierta</dd></div>
-                </dl>
-              </div>
-              <div class="asset-rail">
-                <div class="assets">
-                  <div class="asset-card">
-                    <strong>Planos</strong>
-                    <p class="asset-note">Planos completos disponibles.</p>
-                  </div>
-                  <div class="asset-card">
-                    <strong>Video</strong>
-                    <p class="asset-note">Render animado listo para publicar.</p>
-                  </div>
-                </div>
-              </div>
+        <!-- CASA PATAGONIA -->
+        <article class="model">
+          <div class="model__head">
+            <h3>Casa Patagonia</h3>
+            <span class="badge">132 m2</span>
+          </div>
+          <div class="model__body">
+            <div class="model__gallery">
+              <img src="imagenes/patagonia-1.jpg" alt="Casa Patagonia">
+              <img src="imagenes/patagonia-2.jpg" alt="Casa Patagonia interior">
             </div>
-          </article>
+            <div class="model__info">
+              <p>3 dorm - 5 amb - 3 banos - Semi-cubierta</p>
+              <p>Volumenes escalonados y revestimientos nobles para climas frios.</p>
+            </div>
+          </div>
+        </article>
 
-          <article class="model-card">
-            <header class="model-card__header">
-              <div>
-                <h3 class="model-card__title">Casa Río</h3>
-                <p class="model-card__meta">3 dormitorios · 4 ambientes · 2 baños</p>
-              </div>
-              <p class="badge">110 m² · Cochera abierta</p>
-            </header>
-            <div class="model-card__body">
-              <div class="model-card__summary">
-                <p class="model-description">Tipología en L, galería corrida y visual hacia el patio interno. Perfecta si querés separar el ala social del área privada.</p>
-                <dl class="data-list">
-                  <div><dt>Superficie</dt><dd>110 m²</dd></div>
-                  <div><dt>Ambientes</dt><dd>3 dormitorios · 4 ambientes</dd></div>
-                  <div><dt>Baños</dt><dd>2</dd></div>
-                  <div><dt>Cocheras</dt><dd>Cochera abierta</dd></div>
-                </dl>
-              </div>
-              <div class="asset-rail">
-                <div class="assets">
-                  <div class="asset-card">
-                    <strong>Planos</strong>
-                    <p class="asset-note">Planos coordinados con detalles de montaje.</p>
-                  </div>
-                  <div class="asset-card">
-                    <strong>Video</strong>
-                    <p class="asset-note">Video de montaje próximo.</p>
-                  </div>
-                </div>
-              </div>
+        <!-- CASA RIO -->
+        <article class="model">
+          <div class="model__head">
+            <h3>Casa Rio</h3>
+            <span class="badge">110 m2</span>
+          </div>
+          <div class="model__body">
+            <div class="model__gallery">
+              <img src="imagenes/rio-1.jpg" alt="Casa Rio">
+              <img src="imagenes/rio-2.jpg" alt="Casa Rio interior">
             </div>
-          </article>
+            <div class="model__info">
+              <p>3 dorm - 4 amb - 2 banos - Cochera abierta</p>
+              <p>Tipologia en L con galeria corrida y visual al patio.</p>
+            </div>
+          </div>
+        </article>
 
-          <article class="model-card">
-            <header class="model-card__header">
-              <div>
-                <h3 class="model-card__title">Casa Sur</h3>
-                <p class="model-card__meta">2 dormitorios · 3 ambientes · 2 baños</p>
-              </div>
-              <p class="badge">86 m² · Sin cochera</p>
-            </header>
-            <div class="model-card__body">
-              <div class="model-card__summary">
-                <p class="model-description">Dúplex compacto y luminoso, con planta baja libre y dormitorios arriba. Ideal para primeras viviendas que buscan crecer sin perder confort.</p>
-                <dl class="data-list">
-                  <div><dt>Superficie</dt><dd>86 m²</dd></div>
-                  <div><dt>Ambientes</dt><dd>2 dormitorios · 3 ambientes</dd></div>
-                  <div><dt>Baños</dt><dd>2</dd></div>
-                  <div><dt>Cocheras</dt><dd>Sin cochera</dd></div>
-                </dl>
-              </div>
-              <div class="asset-rail">
-                <div class="assets">
-                  <div class="asset-card">
-                    <strong>Planos</strong>
-                    <p class="asset-note">Planos disponibles bajo solicitud.</p>
-                  </div>
-                  <div class="asset-card">
-                    <strong>Video</strong>
-                    <p class="asset-note">Video de entrega final en agenda.</p>
-                  </div>
-                </div>
-              </div>
+        <!-- CASA SUR -->
+        <article class="model">
+          <div class="model__head">
+            <h3>Casa Sur</h3>
+            <span class="badge">86 m2</span>
+          </div>
+          <div class="model__body">
+            <div class="model__gallery">
+              <img src="imagenes/sur-1.jpg" alt="Casa Sur">
+              <img src="imagenes/sur-2.jpg" alt="Casa Sur interior">
             </div>
-          </article>
-        </div>
-      </section>
-    </main>
-  </body>
+            <div class="model__info">
+              <p>2 dorm - 3 amb - 2 banos - Sin cochera</p>
+              <p>Duplex compacto con planta baja libre y dormitorios arriba.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="cta" id="contacto">
+      <h2>Listo para construir?</h2>
+      <p>Contactanos y te asesoramos sobre el modelo ideal.</p>
+      <a href="mailto:contacto@amazonia.com" class="btn">Escribinos</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p><strong>Amazonia</strong> - Viviendas industrializadas - 2024</p>
+  </footer>
+
+</body>
 </html>
