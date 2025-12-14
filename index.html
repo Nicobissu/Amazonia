@@ -372,16 +372,52 @@
 
   galleries.forEach((visual) => {
     const slides = visual.querySelectorAll('.slide');
+    const gallery = visual.querySelector('.model__gallery');
     let index = 0;
     const delay = Number(visual.dataset.interval) || 4500;
+    let timer;
 
-    if (slides.length < 2) return;
+    if (slides.length < 2 || !gallery) return;
 
-    setInterval(() => {
+    const prevBtn = document.createElement('button');
+    prevBtn.className = 'gallery__nav gallery__nav--prev';
+    prevBtn.setAttribute('aria-label', 'Imagen anterior');
+    prevBtn.innerHTML = '‹';
+
+    const nextBtn = document.createElement('button');
+    nextBtn.className = 'gallery__nav gallery__nav--next';
+    nextBtn.setAttribute('aria-label', 'Imagen siguiente');
+    nextBtn.innerHTML = '›';
+
+    gallery.appendChild(prevBtn);
+    gallery.appendChild(nextBtn);
+
+    const showSlide = (newIndex) => {
       slides[index].classList.remove('active');
-      index = (index + 1) % slides.length;
+      index = (newIndex + slides.length) % slides.length;
       slides[index].classList.add('active');
-    }, delay);
+    };
+
+    const startAuto = () => {
+      timer = setInterval(() => showSlide(index + 1), delay);
+    };
+
+    const resetAuto = () => {
+      if (timer) clearInterval(timer);
+      startAuto();
+    };
+
+    prevBtn.addEventListener('click', () => {
+      showSlide(index - 1);
+      resetAuto();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      showSlide(index + 1);
+      resetAuto();
+    });
+
+    startAuto();
   });
   </script>
 
